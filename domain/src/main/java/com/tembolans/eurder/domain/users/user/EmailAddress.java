@@ -2,6 +2,8 @@ package com.tembolans.eurder.domain.users.user;
 
 import com.fasterxml.jackson.annotation.JsonAutoDetect;
 
+import java.util.Objects;
+
 @JsonAutoDetect
 public class EmailAddress {
 
@@ -27,5 +29,19 @@ public class EmailAddress {
 
     public String getUserName() {
         return userName;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        EmailAddress that = (EmailAddress) o;
+        return userName.equals(that.userName) &&
+                domainName.equals(that.domainName);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(userName, domainName);
     }
 }

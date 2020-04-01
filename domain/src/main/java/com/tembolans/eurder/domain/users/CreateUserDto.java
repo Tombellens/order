@@ -7,11 +7,9 @@ import com.tembolans.eurder.domain.users.user.CountryCode;
 import com.tembolans.eurder.domain.users.user.EmailAddress;
 import com.tembolans.eurder.domain.users.user.TelephoneNumber;
 
-import lombok.Getter;
 import lombok.NonNull;
 import lombok.RequiredArgsConstructor;
-import lombok.experimental.Accessors;
-import org.springframework.stereotype.Component;
+
 
 @JsonAutoDetect
 @RequiredArgsConstructor
@@ -37,9 +35,9 @@ public class CreateUserDto {
     }
 
     private String[] validateEmail(String emailAddress) throws InvalidEmailException {
-        if (!emailAddress.contains("@")) throw new InvalidEmailException(" should contain an '@");
+        if (!emailAddress.contains("@")) throw new InvalidEmailException("should contain an '@'");
         String[] emailArray = emailAddress.split("@");
-        if (emailArray.length != 2) throw new InvalidEmailException(" should have the following format -> username @ domain");
+        if (emailArray.length != 2 || emailArray[0].length() == 0 || emailArray[1].length() == 0) throw new InvalidEmailException(" should have the following format -> username @ domain");
         return emailArray;
     }
 
