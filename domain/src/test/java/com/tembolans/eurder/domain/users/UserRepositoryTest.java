@@ -1,7 +1,6 @@
 package com.tembolans.eurder.domain.users;
 
 import com.tembolans.eurder.domain.users.exceptions.AlreadyUsedException;
-import com.tembolans.eurder.domain.users.exceptions.InvalidEmailException;
 import com.tembolans.eurder.domain.users.user.CountryCode;
 import com.tembolans.eurder.domain.users.user.EmailAddress;
 import com.tembolans.eurder.domain.users.user.TelephoneNumber;
@@ -13,7 +12,6 @@ import org.junit.jupiter.api.Test;
 
 import java.util.UUID;
 
-import static org.junit.jupiter.api.Assertions.*;
 
 class UserRepositoryTest {
     UserRepository userRepository;
