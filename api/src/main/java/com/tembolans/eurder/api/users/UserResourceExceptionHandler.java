@@ -1,7 +1,9 @@
 package com.tembolans.eurder.api.users;
 
+import com.tembolans.eurder.domain.users.exceptions.AlreadyUsedException;
 import com.tembolans.eurder.domain.users.exceptions.InvalidEmailException;
 import com.tembolans.eurder.domain.users.exceptions.InvalidPhoneNumberException;
+import com.tembolans.eurder.domain.users.exceptions.UserNotFoundException;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.web.bind.annotation.ControllerAdvice;
@@ -25,6 +27,18 @@ public class UserResourceExceptionHandler {
 
     @ExceptionHandler(InvalidPhoneNumberException.class)
     protected void invalidPhoneNumberException(InvalidEmailException exception, HttpServletResponse response) throws IOException {
+        LOGGER.info(exception.getMessage(), exception);
+        response.sendError(BAD_REQUEST.value(), exception.getMessage());
+    }
+
+    @ExceptionHandler(UserNotFoundException.class)
+    protected void userNotFoundException(UserNotFoundException exception, HttpServletResponse response) throws IOException {
+        LOGGER.info(exception.getMessage(), exception);
+        response.sendError(BAD_REQUEST.value(), exception.getMessage());
+    }
+
+    @ExceptionHandler(AlreadyUsedException.class)
+    protected void userNotFoundException(AlreadyUsedException exception, HttpServletResponse response) throws IOException {
         LOGGER.info(exception.getMessage(), exception);
         response.sendError(BAD_REQUEST.value(), exception.getMessage());
     }
