@@ -21,4 +21,15 @@
         </plugins>
     </build>
 
+    <dependencies>
+        <dependency>
+            <groupId>com.tembolans</groupId>
+            <artifactId>api</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.tembolans</groupId>
+            <artifactId>domain</artifactId>
+        </dependency>
+    </dependencies>
+
 </project>
