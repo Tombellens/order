@@ -10,52 +10,52 @@ As a developer you have to make choices constantly.
 Choices about time efficiency and quality, choices about your architecture, choices about functionality.
 Which choices did you make? (List your choices below, remove what is not relevant)
  - What is your focus when working on Örder?
- > ....
+ > Learning / Experimenting / Being precise / Use "Best Practices"
  - Do you have a single-module maven project? Or a multi-module maven project?
- > ....
+ > Multi-Module
  - Are you working test-first?
- > ....
+ > No, I write the test after each feature.
  - Do you have security enabled?
- > ....
+ > Not yet.
  - Do you have logging enabled?
- > ....
+ > Yes
  - What happens if the firstname contains numbers? Is this allowed?
- > ....
+ > Nothing, I do validate the email, telephone number and price though.
  - In which currency are the prices?
- > ....
+ > There is an Enum, you can pick the currency
  - Does the phonenumber include the country code?
- > ....
+ > Yes, it is an Enum which has the country as a String field
  - Did you go for a similar architecture as digibooky?
- > ....
+ > Yes, API-SERVICE-DOMAIN.
  - Is your application deployed in the cloud? (Heroku?)
- > ....
+ > Not yet
  - ....
 ## Progress Story 0 (project setup & technical requirements)
  - [x] Be awesome
- - [ ] Setup Github
- - [ ] Setup Jenkins
- - [ ] Basic setup / skeleton for Spring Boot & Maven
- - [ ] I have my first REST Controller ready
- - [ ] I commit/push my code on a regular basis
- - [ ] Swagger is enabled
+ - [x] Setup Github
+ - [x] Setup Jenkins
+ - [x] Basic setup / skeleton for Spring Boot & Maven
+ - [x] I have my first REST Controller ready
+ - [x] I commit/push my code on a regular basis
+ - [x] Swagger is enabled
 ### Comments:
 ## Story 1
- - [ ] The functional requirements are implemented
- - [ ] The requirements are tested with Postman
- - [ ] The requirements are unit tested
+ - [x] The functional requirements are implemented
+ - [x] The requirements are tested with Postman
+ - [x] The requirements are unit tested
  - [ ] The requirements are integration tested
- - [ ] Proper logging is setup
- - [ ] I did a "codereview" of my own code before declaring it "done".
- - [ ] I commit/push my code when this story was done
+ - [x] Proper logging is setup
+ - [x] I did a "codereview" of my own code before declaring it "done".
+ - [x] I commit/push my code when this story was done
 ### Comments:
 ## Story 2
- - [ ] The functional requirements are implemented
- - [ ] The requirements are tested with Postman
+ - [x] The functional requirements are implemented
+ - [x] The requirements are tested with Postman
  - [ ] The requirements are unit tested
  - [ ] The requirements are integration tested
- - [ ] Proper logging is setup
- - [ ] I did a "codereview" of my own code before declaring it "done".
- - [ ] I commit/push my code when this story was done
+ - [x] Proper logging is setup
+ - [x] I did a "codereview" of my own code before declaring it "done".
+ - [x] I commit/push my code when this story was done
 ### Comments:
 ## Story 3
  - [ ] The functional requirements are implemented
@@ -67,27 +67,27 @@ Which choices did you make? (List your choices below, remove what is not relevan
  - [ ] I commit/push my code when this story was done
 ### Comments: 
 ## Story 7
- - [ ] The functional requirements are implemented
- - [ ] The requirements are tested with Postman
- - [ ] The requirements are unit tested
+ - [x] The functional requirements are implemented
+ - [x] The requirements are tested with Postman
+ - [x] The requirements are unit tested
  - [ ] The requirements are integration tested
- - [ ] Proper logging is setup
- - [ ] I did a "codereview" of my own code before declaring it "done".
- - [ ] I commit/push my code when this story was done
+ - [x] Proper logging is setup
+ - [x] I did a "codereview" of my own code before declaring it "done".
+ - [x] I commit/push my code when this story was done
 ### Comments: 
 ## Story 8
- - [ ] The functional requirements are implemented
- - [ ] The requirements are tested with Postman
- - [ ] The requirements are unit tested
+ - [x] The functional requirements are implemented
+ - [x] The requirements are tested with Postman
+ - [x] The requirements are unit tested
  - [ ] The requirements are integration tested
- - [ ] Proper logging is setup
- - [ ] I did a "codereview" of my own code before declaring it "done".
- - [ ] I commit/push my code when this story was done
+ - [x] Proper logging is setup
+ - [x] I did a "codereview" of my own code before declaring it "done".
+ - [x] I commit/push my code when this story was done
 ### Comments: 
 ## Nice-To-Have stories
  - [ ] Story 4
  - [ ] Story 5
  - [ ] Story 6
  - [ ] Story 9
- - [ ] Story 10
+ - [x] Story 10
 ### Comments:
