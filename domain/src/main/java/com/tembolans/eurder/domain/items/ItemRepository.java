@@ -3,6 +3,7 @@ package com.tembolans.eurder.domain.items;
 import com.tembolans.eurder.domain.items.dto.item.Item;
 import com.tembolans.eurder.domain.items.dto.item.ItemComparator;
 import com.tembolans.eurder.domain.items.dto.item.UrgencyIndicator;
+import com.tembolans.eurder.domain.items.exceptions.SameItemNameException;
 import com.tembolans.eurder.domain.users.exceptions.InvalidUrgencyException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
@@ -22,9 +23,17 @@ public class ItemRepository {
         this.itemRepository = new ConcurrentHashMap<>();
     }
 
-    public Item addItem(Item item){
-        itemRepository.put(item.getId(), item);
+    public Item addItem(Item item) throws SameItemNameException {
+        if (!validateName(item))itemRepository.put(item.getId(), item);
+        else throw new SameItemNameException(item.getName());
         return item;
+    }
+
+    private boolean validateName(Item item) {
+        List<String> namesList = itemRepository.values().stream()
+                                                .map(itemInStream -> itemInStream.getName())
+                                                .collect(Collectors.toList());
+        return namesList.contains(item.getName());
     }
 
     public List<Item> getItemOverview(String urgency) throws InvalidUrgencyException {
