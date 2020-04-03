@@ -58,13 +58,13 @@ Which choices did you make? (List your choices below, remove what is not relevan
  - [x] I commit/push my code when this story was done
 ### Comments:
 ## Story 3
- - [ ] The functional requirements are implemented
- - [ ] The requirements are tested with Postman
+ - [x] The functional requirements are implemented
+ - [x] The requirements are tested with Postman
  - [ ] The requirements are unit tested
  - [ ] The requirements are integration tested
- - [ ] Proper logging is setup
- - [ ] I did a "codereview" of my own code before declaring it "done".
- - [ ] I commit/push my code when this story was done
+ - [x] Proper logging is setup
+ - [x] I did a "codereview" of my own code before declaring it "done".
+ - [x] I commit/push my code when this story was done
 ### Comments: 
 ## Story 7
  - [x] The functional requirements are implemented
