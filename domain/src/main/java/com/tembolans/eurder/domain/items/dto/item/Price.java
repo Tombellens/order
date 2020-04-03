@@ -20,6 +20,14 @@ public class Price {
         return totalPrice;
     }
 
+    public double getPriceDouble(){
+        return price;
+    }
+
+    public Currency getCurrency(){
+        return currency;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;

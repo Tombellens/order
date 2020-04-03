@@ -10,6 +10,7 @@ import org.springframework.stereotype.Repository;
 
 import java.util.List;
 import java.util.Map;
+import java.util.Optional;
 import java.util.UUID;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.stream.Collectors;
@@ -61,5 +62,11 @@ public class ItemRepository {
             throw new InvalidUrgencyException(urgency + " is not a valid urgency. Provide STOCK_LOW, STOCK_MEDIUM, STOCK_HIGH or nothing");
         }
 
+    }
+
+    public Optional<Item> getItemByName(String itemName){
+        return itemRepository.values().stream()
+                                .filter(item -> item.getName().equals(itemName))
+                                .findFirst();
     }
 }
